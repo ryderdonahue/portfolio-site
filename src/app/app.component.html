@@ -1,0 +1,97 @@
+<div class="host">
+  <canvas id="background-canvas" class="site-canvas">
+  </canvas>
+  <site-title>
+  </site-title>
+  <graphic-text class="bio-intro" *ngIf="core.scene.value === 'intro'" [textString]="bioIntro" [ngClass]="{'bio-hide': core.scene.value !== 'intro'}"
+    [speed]='50'></graphic-text>
+  <div *ngIf="showSeeWork" (click)="showWork()" class="see-work" [ngClass]="{'see-work-transition': transition}">
+    <spacer></spacer>
+    See work
+  </div>
+  <div *ngIf="showMenuBar" class="menu-bar">
+    <spacer></spacer>
+    <div class="row">
+      <ryd-menu-button [text]="'Microsoft Xbox'" (click)="openMenu('xbox')" delay=0></ryd-menu-button>
+      <ryd-menu-button [text]="'Imagine Cup'" (click)="openMenu('imagine')" delay=250></ryd-menu-button>
+      <ryd-menu-button [text]="'Flash Games'" (click)="openMenu('flash')" delay=500></ryd-menu-button>
+    </div>
+  </div>
+  <div *ngIf="core.scene.value === 'main'" class="cheap-fade"></div>
+  <div *ngIf="core.scene.value === 'main'" class="cheap-fade-bottom"></div>
+  <div *ngIf="core.scene.value === 'main'" class="sub-content-area" #subContent>
+    <div class="row center sub-page" #xboxContent>
+      <div class="sub-page-text">
+        <div class="job-title">
+          Role: Software Engineer II
+        </div>
+        <div class="description">
+          {{xboxText}}
+        </div>
+        <div class="row">
+          <div class="products-title">
+            Products:
+          </div>
+          <div class="column">
+            <div *ngFor="let product of xboxProducts">
+              <div> {{product.name}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-image: url(./assets/img/xboxapp.png); width: 646px; height: 493px;"></div>
+    </div>
+
+    <div class="row center sub-page" #imagineContent>
+      <div class="sub-page-text">
+        <div class="job-title">
+          Role: Team Member
+        </div>
+        <div class="description">
+          In 2013, my team and I participated in Micosoft's Imagine Cup competition. Our project won us the United States Imagine Cup,
+          beating over 2,000 other teams and allowing us to compete in the World Finals.
+          <br>Our submission, help he help, is a suite of applications to help those in need during an emergency or natural
+          disaster, while also assisting emergency response personnel in relief and recovery efforts.
+          <br>After the competition, we saught to make <i>help me help</i> real. While we were successful in gaining meetings with
+          state and federal government officials, we eventually ran out of funding and each member of the team pursued new
+          opportunities.
+          <br>Fortunately it appears that our project has inspired a new featureset in FEMA's official disaster response application,
+          so even if <i>help me help</i> isn't the name of the product, it's concept will be carried on to help people in need in
+          the future.
+        </div>
+        <div class="row">
+          <div class="products-title">
+            Products:
+          </div>
+          <div class="column">
+            <div>
+              <div>help me help (defunct)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-image: url(./assets/img/imagine.png); width: 570px; height: 396px;"></div>
+    </div>
+
+    <div class="row center sub-page" #flashContent>
+      <div class="sub-page-text">
+        <div class="job-title">
+          Role: Team Member
+        </div>
+        <div class="description">
+        </div>
+        <div class="row">
+          <div class="products-title">
+            Products:
+          </div>
+          <div class="column">
+            <div>
+              <div>melp me help (defunct)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-image: url(./assets/img/xboxapp.png); width: 646px; height: 493px;"></div>
+    </div>
+  </div>
+</div>

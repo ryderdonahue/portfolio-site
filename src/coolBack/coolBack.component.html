@@ -1,0 +1,6 @@
+<div class="back"> 
+  <div *ngFor="let dash of dashes"> 
+    <div [ngStyle]="{ 'transform': 'translate('+ dash.x +'px,' + dash.y +'px)', 'opacity': dash.a }" class="dash">-</div>
+    <!--<div [ngStyle]="{ 'transform': 'translate('+ dash.x +'px,' + dash.y +'px)', 'opacity': dash.a }" class="dash">-</div>-->
+  </div>
+</div>

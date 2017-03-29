@@ -1,0 +1,40 @@
+.graphic-text {
+    font-size: 18px;
+    font-family: monospace;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+.no-select {
+    cursor: none;
+}
+
+.effect-text {
+    animation-name: blurText;
+    animation-duration: 90ms;
+    filter: blur(5px);
+    animation-iteration-count: infinite;
+}
+
+.effect-done {
+    animation-duration: 200ms;
+    filter: blur(5px);
+}
+
+
+/*
+.no-blur {
+    filter: blur(0px)
+}
+
+.blur {
+    filter: blur(3px)
+}*/
+
+
+/*
+@keyframes blurText {
+    0%   {filter: blur(0px);}
+    100% {filter: blur(5px);}
+}*/

@@ -1,0 +1,6 @@
+{
+  "files": ["./src/**/*.{html,htm,scss,js,ts}"],
+  "ui": {
+    "port": 8001
+  }
+}

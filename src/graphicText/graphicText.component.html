@@ -1,0 +1,8 @@
+<div class="relative">
+  <div class="graphic-text no-select" [ngStyle]="{'fontSize': fontSize}">
+    {{displayText}}
+  </div>
+  <div [ngClass]="{'effect-text': writing, 'effect-done': !writing }" [ngStyle]="{'fontSize': fontSize}" class="graphic-text">
+    {{effectsText}}
+  </div>
+</div>

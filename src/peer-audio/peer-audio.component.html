@@ -1,0 +1,19 @@
+<div class="host">
+  <!--<graphic-text class="welcome" [textString]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'" [speed]=3></graphic-text>-->
+  <!--<graphic-text *ngIf="!mypeerid.value" class="item" [textString]="'Acquiring PeerId:'" [speed]=3></graphic-text>-->
+  <graphic-text *ngIf="mypeerid.value" class="item" [textString]="'PeerId:'" [speed]=3></graphic-text>
+  <graphic-text class="item" [textStringObs]="mypeerid"></graphic-text>
+  <div *ngIf="connected" class="myAudio audio" [ngStyle]="{'width': myAudioLevel + 'px'}">
+  </div>
+
+  <div *ngIf="!connected">
+    <input type="text" [(ngModel)]="foreignIdInput" placeholder="peerId">
+    <button (click)="connect()">connect</button>
+  </div>
+  <audio #peerAudio autoplay id="peerAudio"></audio>
+  <spacer *ngIf="connected"></spacer>
+  <graphic-text *ngIf="connected" class="item" [textString]="'Foreign PeerId:'"></graphic-text>
+  <graphic-text *ngIf="connected" class="item" [textStringObs]="foreignId"></graphic-text>
+  <div *ngIf="connected" class="theirAudio audio" [ngStyle]="{'width': foreignAudioLevel +'px'}">
+  </div>
+</div>

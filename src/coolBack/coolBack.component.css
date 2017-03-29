@@ -1,0 +1,9 @@
+.back { 
+    position: absolute;
+}
+
+.dash { 
+    transition: 1s ease-in-out;
+    will-change: transform;
+    position: absolute;
+}
