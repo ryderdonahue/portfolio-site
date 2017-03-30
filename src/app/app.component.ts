@@ -21,6 +21,13 @@ export class AppComponent {
     { name: 'Prototyping & Research Div.' },
     { name: 'Beam Streaming clients' }
   ];
+
+  flashProducts = [
+    { name: 'Project NOVA' },
+    { name: 'Operation BlackKnife' },
+    { name: 'Soviet Silo Defense' },
+    { name: 'Point Resistence' }
+  ];
   showSeeWork = false;
   showMenuBar = false;
   scrollInterval: NodeJS.Timer = null;
@@ -62,7 +69,7 @@ export class AppComponent {
   }
 
   openMenu(item: string) {
-    const globalOffest = 201; 
+    const globalOffest = 201;
     switch (item) {
       case 'xbox':
         this.scrollTo(this.xboxContent.nativeElement.offsetTop - globalOffest);
