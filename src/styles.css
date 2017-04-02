@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
+.body-host {
   background: black !important;
   color: white;
+  overflow: hidden;
 }
 
 .relative {
@@ -27,4 +28,13 @@ div {
 
 .center {
   align-items: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

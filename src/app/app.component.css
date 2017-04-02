@@ -1,93 +1,84 @@
 .host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: -10px;
+  overflow: hidden;
 }
 
 div {
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 .item {
-    width: 200px;
-    height: 22px;
+  width: 200px;
+  height: 22px;
 }
 
 input {
-    background: black;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
+  background: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
 }
 
 .width-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .site-canvas {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    z-index: -1
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: -1
 }
 
 .bio-intro {
-    width: 380px;
-    margin-top: 15px;
-    transition: all 200ms ease-in-out;
-    opacity: 1;
+  width: 380px;
+  margin-top: 15px;
+  transition: all 200ms ease-in-out;
+  opacity: 1;
 }
 
 .bio-hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .see-work {
-    text-align: center;
-    width: 450px;
-    margin-top: 100px;
-    animation-name: fade-in;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  text-align: center;
+  width: 450px;
+  margin-top: 100px;
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 @keyframes menu-grow {
-    0% {
-        margin-top: 100px;
-        width: 450px;
-    }
-    100% {
-        margin-top: 5px;
-        width: 500px;
-    }
+  0% {
+    margin-top: 100px;
+    width: 450px;
+  }
+  100% {
+    margin-top: 5px;
+    width: 500px;
+  }
 }
 
 .icon {
-    background-size: contain;
-    opacity: 0;
-    margin: 0px 10px;
-    top: -20px;
-    position: relative;
-    height: 100%;
-    width: 100%;
+  background-size: contain;
+  opacity: 0;
+  margin: 0px 10px;
+  top: -20px;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-
