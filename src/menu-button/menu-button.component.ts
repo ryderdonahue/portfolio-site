@@ -1,4 +1,4 @@
-import { AfterViewInit, OnInit, Component, Input, ChangeDetectorRef } from '@angular/core';
+import { AfterViewInit, ElementRef,  OnInit, Component, Input, ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'ryd-menu-button',
   templateUrl: './menu-button.component.html',
@@ -7,6 +7,8 @@ import { AfterViewInit, OnInit, Component, Input, ChangeDetectorRef } from '@ang
 export class MenuButton implements AfterViewInit {
   @Input() delay: number = 500;
   @Input() text: string = 'button';
+  @Input() highlight: boolean = false;
+
   public show: boolean = false;
   constructor() {
 
@@ -16,5 +18,4 @@ export class MenuButton implements AfterViewInit {
       this.show = true;
     }, this.delay);
   }
-
 }

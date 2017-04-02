@@ -1,0 +1,94 @@
+<div class="host">
+  <div class="menu-bar">
+    <spacer></spacer>
+    <div class="row">
+      <ryd-menu-button [text]="'Microsoft Xbox'" [highlight]="xboxSelected" (click)="openMenu('xbox')" delay=0></ryd-menu-button>
+      <ryd-menu-button [text]="'Imagine Cup'" [highlight]="imagineSelected" (click)="openMenu('imagine')" delay=250></ryd-menu-button>
+      <ryd-menu-button [text]="'Flash Games'" [highlight]="flashSelected" (click)="openMenu('flash')" delay=500></ryd-menu-button>
+    </div>
+  </div>
+  <div class="cheap-fade"></div>
+  <div class="cheap-fade-bottom"></div>
+
+  <div class="sub-content-area" #subContent>
+    <div class="row center sub-page" #xboxContent>
+      <div class="sub-page-text">
+        <div class="job-title">
+          Role: Software Engineer II
+        </div>
+        <div class="description">
+          {{xboxText}}
+        </div>
+        <div class="row">
+          <div class="products-title">
+            Products:
+          </div>
+          <div class="column">
+            <div *ngFor="let product of xboxProducts">
+              <div> {{product.name}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-image: url(./assets/img/xboxapp.png); height: 493px;" class="sub-page-image"></div>
+    </div>
+
+    <div class="row center sub-page" #imagineContent>
+      <div class="sub-page-text">
+        <div class="job-title">
+          Role: Team Member
+        </div>
+        <div class="description">
+          In 2013, my team and I participated in Micosoft's Imagine Cup competition. Our project won us the United States Imagine Cup,
+          beating over 2,000 other teams and allowing us to compete in the World Finals.
+          <br>Our submission, help he help, is a suite of applications to help those in need during an emergency or natural
+          disaster, while also assisting emergency response personnel in relief and recovery efforts.
+          <br>After the competition, we saught to make <i>help me help</i> real. While we were successful in gaining meetings
+          with state and federal government officials, we eventually ran out of funding and each member of the team pursued
+          new opportunities.
+          <br>Fortunately it appears that our project has inspired a new featureset in FEMA's official disaster response
+          application, so even if <i>help me help</i> isn't the name of the product, it's concept will be carried on to help
+          people in need in the future.
+        </div>
+        <div class="row">
+          <div class="products-title">
+            Products:
+          </div>
+          <div class="column">
+            <div>
+              <div>help me help (defunct)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-image: url(./assets/img/imagine.png); height: 396px;" class="sub-page-image"></div>
+    </div>
+
+    <div class="row center sub-page" #flashContent>
+      <div class="sub-page-text">
+        <div class="job-title">
+          Role: Independent Developer
+        </div>
+        <div class="description">
+          Developing Flash Games was my first introdunction into the programming world. I started at the age of 15 with no formal programming
+          knowledge or training, and published my first game with a sponsor 1 year later. I really enjoyed the whole process
+          and continued on to publish 3 more games, each with increasing complexity and ambition.
+          <br>It was a great learning experience for me, and gave me a primal knowledge and understanding of programming,
+          game design, and software development practices. A small part of me love to continue making flash games, but it
+          seems that the market is drying up and audiences are shifting their attention to new platforms, and so am I :)
+        </div>
+        <div class="row">
+          <div class="products-title">
+            Products:
+          </div>
+          <div class="column">
+            <div *ngFor="let product of flashProducts">
+              <div>{{product.name}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-image: url(./assets/img/xboxapp.png); height: 493px;" class="sub-page-image"></div>
+    </div>
+  </div>
+</div>

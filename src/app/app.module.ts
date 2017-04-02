@@ -10,6 +10,7 @@ import { MenuButton } from '../menu-button/menu-button.component';
 import { PeerAudio } from '../peer-audio/peer-audio.component';
 import { SiteTitle } from '../site-title/site-title.component';
 import { Spacer } from '../spacer/spacer.component';
+import { WorkHistory } from '../work-history/work-history.component';
 import { Icon } from '../icon/icon.component';
 import { Core } from '../Core';
 @NgModule({
@@ -21,6 +22,7 @@ import { Core } from '../Core';
     PeerAudio,
     SiteTitle,
     Spacer,
+    WorkHistory
   ],
   imports: [
     BrowserModule,

@@ -61,17 +61,6 @@ input {
     cursor: pointer;
 }
 
-.menu-bar {
-    text-align: center;
-    margin-top: 5px;
-    width: 500px;
-    animation-name: menu-grow;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    font-size: 14px;
-    animation-fill-mode: forwards;
-}
-
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -102,79 +91,3 @@ input {
     width: 100%;
 }
 
-.sub-content-area {
-    overflow-y: scroll;
-    height: calc(100vh - 150px);
-    scroll-behavior: smooth;
-}
-
-.cheap-fade {
-    background-image: url(./assets/img/cheap-fade.png);
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 137px;
-}
-
-.cheap-fade-bottom {
-    background-image: url(./assets/img/cheap-fade.png);
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    bottom: 0px;
-    -moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
-    filter: FlipV;
-    -ms-filter: "FlipV";
-}
-
-.sub-content-area::-webkit-scrollbar-track {
-    border-radius: 8px;
-}
-
-.sub-content-area::-webkit-scrollbar {
-    width: 8px;
-    background-color: transparent;
-}
-
-.sub-content-area::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: #333;
-}
-
-.sub-page {
-    margin-top: 64px;
-    margin-bottom: 100px;
-}
-
-.sub-page-image {
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    width: 646px;
-}
-
-.sub-page-text {
-    max-width: 600px;
-    margin-left: 20px;
-    align-items: center;
-}
-
-.job-title {
-    font-size: 18px;
-    margin-left: 15px;
-}
-
-.products-title {
-    font-size: 16px;
-    text-align: right;
-    width: 80px;
-    margin-right: 12px;
-}
-
-.description {
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 14px 0px;
-}
