@@ -11,8 +11,8 @@ export class MenuButton implements AfterViewInit {
 
   public show: boolean = false;
   constructor() {
-
   }
+
   ngAfterViewInit() {
     setTimeout(() => {
       this.show = true;

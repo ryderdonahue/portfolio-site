@@ -23,11 +23,10 @@ export class WorkHistory implements AfterViewInit {
 
   globalOffest = 201;
 
-  xboxText = 'Since the Summer of 2014 I have been been a full time Software Engineer at Microsoft working under the Xbox orginization. During my time in Redmond I have worked on a handful of products with a menagerie of technologies. Working at Microsoft has given me the access to work with a bountiful collection of bright and talented people, many of whome I consider good friends.';
   xboxProducts = [
     { name: 'Xbox One Shell/Dashboard' },
     { name: 'Xbox App on Windows' },
-    { name: 'Prototyping & Research Div.' },
+    { name: 'Prototyping & Research' },
     { name: 'Beam Streaming clients' }
   ];
 
