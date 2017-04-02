@@ -8,10 +8,6 @@
   overflow: hidden;
 }
 
-div {
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-}
-
 .item {
   width: 200px;
   height: 22px;

@@ -17,7 +17,7 @@ export class WorkHistory implements AfterViewInit {
   flashOffset: number = 0;
   imagineOffset: number = 0;
 
-  xboxSelected: boolean = false;
+  xboxSelected: boolean = true;
   flashSelected: boolean = false;
   imagineSelected: boolean = false;
 

@@ -12,6 +12,7 @@
 
 div {
   width: 100%;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 .row {
@@ -37,4 +38,102 @@ div {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes loadingAnim {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    transform: translateX(300px);
+    opacity: 0
+  }
+}
+
+
+
+.loading {
+  position: absolute;
+  top: calc(50%);
+  left: 50%
+}
+
+.loading .dash {
+  position: absolute;
+  opacity: 0;
+  animation: loadingAnim 2.5s ease-in-out 0s infinite;
+}
+
+.loading .dash:nth-child(1) {
+  animation-delay: 0s
+}
+
+.loading .dash:nth-child(2) {
+  animation-delay: .15s
+}
+
+.loading .dash:nth-child(3) {
+  animation-delay: .3s
+}
+
+.loading .dash:nth-child(4) {
+  animation-delay: .45s
+}
+
+.loading .dash:nth-child(5) {
+  animation-delay: .60s
+}
+
+.loading .dash:nth-child(6) {
+  animation-delay: .75s
+}
+
+.loading .dash:nth-child(7) {
+  animation-delay: .90s
+}
+
+.loading .dash:nth-child(8) {
+  animation-delay: 1.05s
+}
+
+.loading .dash:nth-child(9) {
+  animation-delay: 1.2s
+}
+
+.loading .dash:nth-child(10) {
+  animation-delay: 1.35s
+}
+
+.loading .dash:nth-child(11) {
+  animation-delay: 1.5s
+}
+
+.loading .dash:nth-child(12) {
+  animation-delay: 1.65s
+}
+
+.loading .dash:nth-child(13) {
+  animation-delay: 1.65s
+}
+
+.loading .dash:nth-child(14) {
+  animation-delay: 1.80s
+}
+
+/*why havent I automated this yet*/
+
+.loading .dash:nth-child(15) {
+  animation-delay: 1.95s
+}
+
+.loading .dash:nth-child(16) {
+  animation-delay: 2.1s
+}
+
+.loading .dash:nth-child(17) {
+  animation-delay: 2.25s
 }
