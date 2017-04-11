@@ -102,3 +102,23 @@
   animation-duration: 500ms;
   animation-timing-function: ease-in-out;
 }
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: #aaa;
+}
+
+/* mouse over link */
+a:hover {
+    color: steelblue;
+}
+
+/* selected link */
+a:active {
+    color: aqua;
+}

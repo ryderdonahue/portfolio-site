@@ -9,6 +9,7 @@ export class Icon implements AfterViewInit {
   @Input() source: string = '';
   @Input() size: string = '42';
   @Input() altText: string = 'missing icon alt-text';
+  @Input() link: string = '';
   public show: boolean = false;
   constructor() {
 

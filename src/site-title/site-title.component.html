@@ -2,10 +2,13 @@
   <div>
     Ryder Donahue
   </div>
-  <spacer class="width-100"  [ngClass]="{'spacer-docked': scene!=='intro'}" ></spacer>
+  <spacer class="width-100" [ngClass]="{'spacer-docked': scene!=='intro'}"></spacer>
   <div class="row">
-    <ryd-icon [size]="size" [ngClass]="{'icons-docked': scene!=='intro'}" class="icons" (click)="openExternal('https://www.linkedin.com/in/ryder-donahue')" source=".\\assets\\icons\\linkedin.png" delay=0></ryd-icon>
-    <ryd-icon [size]="size" [ngClass]="{'icons-docked': scene!=='intro'}" class="icons" (click)="openExternal('https://twitter.com/RyderDonahue')" source=".\\assets\\icons\\twitter.png" delay=250></ryd-icon>
-    <ryd-icon [size]="size" [ngClass]="{'icons-docked': scene!=='intro'}" class="icons" (click)="openExternal('https://github.com/ryderdonahue')" source=".\\assets\\icons\\github.png" delay=500></ryd-icon>
+    <ryd-icon [size]="size" [link]="'https://www.linkedin.com/in/ryder-donahue'" [ngClass]="{'icons-docked': scene!=='intro'}"
+      class="icons" source=".\\assets\\icons\\linkedin.png" delay=0></ryd-icon>
+    <ryd-icon [size]="size" [link]="'https://twitter.com/RyderDonahue'" [ngClass]="{'icons-docked': scene!=='intro'}" class="icons"
+      source=".\\assets\\icons\\twitter.png" delay=250></ryd-icon>
+    <ryd-icon [size]="size" [link]="'https://github.com/ryderdonahue'" [ngClass]="{'icons-docked': scene!=='intro'}" class="icons"
+      source=".\\assets\\icons\\github.png" delay=500></ryd-icon>
   </div>
 </div>

@@ -31,10 +31,14 @@ export class WorkHistory implements AfterViewInit {
   ];
 
   flashProducts = [
-    { name: 'Project NOVA' },
-    { name: 'Operation BlackKnife' },
-    { name: 'Soviet Silo Defense' },
-    { name: 'Point Resistence' }
+    { name: 'Project NOVA',
+      url: 'http://armorgames.com/play/14228/project-nova' },
+    { name: 'Operation BlackKnife',
+      url: 'http://armorgames.com/play/6507/operation-blackknife' },
+    { name: 'Soviet Silo Defense',
+      url: 'http://armorgames.com/play/1906/soviet-silo-defense' },
+    { name: 'Point Resistence',
+      url: 'http://armorgames.com/play/453/pointresistance-imminent-position' }
   ];
 
   scrollInterval: NodeJS.Timer = null;
