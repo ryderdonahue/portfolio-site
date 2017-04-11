@@ -58,7 +58,7 @@
   width: 100%;
   height: 100px;
   position: absolute;
-  top: 137px;
+  top: 136px;
 }
 
 .cheap-fade-bottom {
@@ -103,22 +103,64 @@
   animation-timing-function: ease-in-out;
 }
 
+
 /* unvisited link */
+
 a:link {
-    color: white;
+  color: white;
 }
+
 
 /* visited link */
+
 a:visited {
-    color: #aaa;
+  color: #aaa;
 }
+
 
 /* mouse over link */
+
 a:hover {
-    color: steelblue;
+  color: steelblue;
 }
 
+
 /* selected link */
+
 a:active {
-    color: aqua;
+  color: aqua;
+}
+
+@media screen and (max-width:500px) {
+  .sub-page-image {
+    visibility: collapse;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+  .sub-page-text {
+    max-width: 100%;
+    margin: 30px;
+  }
+  .sub-page {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .sub-page-image {
+    visibility: collapse;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+  .sub-page-text {
+    max-width: 100%;
+    margin: 30px;
+  }
+  .sub-page {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 }

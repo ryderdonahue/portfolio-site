@@ -31,14 +31,22 @@ export class WorkHistory implements AfterViewInit {
   ];
 
   flashProducts = [
-    { name: 'Project NOVA',
-      url: 'http://armorgames.com/play/14228/project-nova' },
-    { name: 'Operation BlackKnife',
-      url: 'http://armorgames.com/play/6507/operation-blackknife' },
-    { name: 'Soviet Silo Defense',
-      url: 'http://armorgames.com/play/1906/soviet-silo-defense' },
-    { name: 'Point Resistence',
-      url: 'http://armorgames.com/play/453/pointresistance-imminent-position' }
+    {
+      name: 'Project NOVA',
+      url: 'http://armorgames.com/play/14228/project-nova'
+    },
+    {
+      name: 'Operation BlackKnife',
+      url: 'http://armorgames.com/play/6507/operation-blackknife'
+    },
+    {
+      name: 'Soviet Silo Defense',
+      url: 'http://armorgames.com/play/1906/soviet-silo-defense'
+    },
+    {
+      name: 'Point Resistence',
+      url: 'http://armorgames.com/play/453/pointresistance-imminent-position'
+    }
   ];
 
   scrollInterval: NodeJS.Timer = null;
@@ -46,7 +54,7 @@ export class WorkHistory implements AfterViewInit {
   constructor(public core: Core) {
 
   }
-
+ 
   ngAfterViewInit() {
     this.xboxOffset = this.xboxContent.nativeElement.offsetTop - this.globalOffest;
     this.flashOffset = this.flashContent.nativeElement.offsetTop - this.globalOffest;
