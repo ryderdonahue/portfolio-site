@@ -54,32 +54,33 @@ export class WorkHistory implements AfterViewInit {
   constructor(public core: Core) {
 
   }
- 
+
   ngAfterViewInit() {
-    this.xboxOffset = this.xboxContent.nativeElement.offsetTop - this.globalOffest;
-    this.flashOffset = this.flashContent.nativeElement.offsetTop - this.globalOffest;
-    this.imagineOffset = this.imagineContent.nativeElement.offsetTop - this.globalOffest;
+    /* lazy */
+    this.xboxOffset = 0;
+    this.imagineOffset = (this.subContent.nativeElement.scrollHeight - this.subContent.nativeElement.clientHeight) / 2;
+    this.flashOffset =  (this.subContent.nativeElement.scrollHeight - this.subContent.nativeElement.clientHeight);
 
-    this.subContent.nativeElement.onscroll = () => {
-      const scroll = this.subContent.nativeElement.scrollTop + this.globalOffest;
-      if (this.xboxOffset + 300 >= scroll && this.xboxOffset - 300 <= scroll) {
-        this.xboxSelected = true;
-      } else {
-        this.xboxSelected = false;
-      }
+      this.subContent.nativeElement.onscroll = () => {
+        const scroll = this.subContent.nativeElement.scrollTop;
+        if (this.xboxOffset + 200 >= scroll && this.xboxOffset - 200 <= scroll) {
+          this.xboxSelected = true;
+        } else {
+          this.xboxSelected = false;
+        }
 
-      if (this.imagineOffset + 300 >= scroll && this.imagineOffset - 300 <= scroll) {
-        this.imagineSelected = true;
-      } else {
-        this.imagineSelected = false;
-      }
+        if (this.imagineOffset + 200 >= scroll && this.imagineOffset - 200 <= scroll) {
+          this.imagineSelected = true;
+        } else {
+          this.imagineSelected = false;
+        }
 
-      if (this.flashOffset + 300 >= scroll && this.flashOffset - 300 <= scroll) {
-        this.flashSelected = true;
-      } else {
-        this.flashSelected = false;
+        if (this.flashOffset + 200 >= scroll && this.flashOffset - 200 <= scroll) {
+          this.flashSelected = true;
+        } else {
+          this.flashSelected = false;
+        }
       }
-    }
 
   }
 
@@ -102,13 +103,13 @@ export class WorkHistory implements AfterViewInit {
   openMenu(item: string) {
     switch (item) {
       case 'xbox':
-        this.scrollTo(this.xboxContent.nativeElement.offsetTop - this.globalOffest);
+        this.scrollTo(this.xboxOffset);
         break;
       case 'imagine':
-        this.scrollTo(this.imagineContent.nativeElement.offsetTop - this.globalOffest);
+        this.scrollTo(this.imagineOffset);
         break;
       case 'flash':
-        this.scrollTo(this.flashContent.nativeElement.offsetTop - this.globalOffest);
+        this.scrollTo(this.flashOffset);
         break;
     }
   }
